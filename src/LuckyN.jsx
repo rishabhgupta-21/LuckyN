@@ -1,7 +1,8 @@
 import "./LuckyN.css";
+import { useState } from "react";
 import { getRolls, sum } from "./utils";
 import Dice from "./Dice";
-import { useState } from "react";
+import Button from "./Button";
 
 function LuckyN({ title = "Lucky Game", numDice = 2, winCheck }) {
 	// State
@@ -27,7 +28,10 @@ function LuckyN({ title = "Lucky Game", numDice = 2, winCheck }) {
 			<Dice dice={dice} />
 
 			{/* Roll Again Button */}
-			<button onClick={roll}>Roll again!</button>
+			<Button
+				text='Roll again!'
+				handleClick={roll}
+			/>
 		</main>
 	);
 }
