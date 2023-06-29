@@ -3,12 +3,12 @@ import { getRolls, sum } from "./utils";
 import Dice from "./Dice";
 import { useState } from "react";
 
-function LuckyN({ numDice = 2, target = 7 }) {
+function LuckyN({ title = "Lucky Game", numDice = 2, winCheck }) {
 	// State
 	const [dice, setDice] = useState(getRolls(numDice));
 
 	// Game Winning logic
-	const isWinner = sum(dice) === target;
+	const isWinner = winCheck(dice);
 
 	// Roll function
 	function roll() {
@@ -18,7 +18,7 @@ function LuckyN({ numDice = 2, target = 7 }) {
 	return (
 		<main className='LuckyN'>
 			{/* Heading */}
-			<h1>Lucky{target}!</h1>
+			<h1>{title}</h1>
 
 			{/* Player 1 */}
 			<h2>
