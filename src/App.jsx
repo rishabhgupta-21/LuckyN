@@ -1,5 +1,4 @@
 import "./App.css";
-// import Lucky7 from "./Lucky7";
 import LuckyN from "./LuckyN";
 import { sum } from "./utils";
 
@@ -15,10 +14,6 @@ function allSame(dice) {
 function App() {
 	return (
 		<>
-			{/* <Lucky7 /> */}
-
-			{/* <LuckyN /> */}
-
 			<LuckyN
 				title='Sum < 7'
 				numDice={3}
